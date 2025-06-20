@@ -1,3 +1,5 @@
+{
+
 // learning function
 // 1. normal function
 // 2. arrow function
@@ -25,4 +27,5 @@ const poorUser = {
 // array 
 const arr: number[] = [1, 3, 35, 56, 6];
 const newArray: number[] = arr.map((element: number): number => element * element);
-console.log(newArray);
+    console.log(newArray);
+}
