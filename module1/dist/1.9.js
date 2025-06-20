@@ -22,4 +22,5 @@
     };
     const userName = "Md Nayeem";
     const isAdmin = true;
+    const add = (num1, num2) => num1 + num2;
 }
