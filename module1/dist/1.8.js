@@ -18,5 +18,5 @@
     // array destructing
     const friends = ["Rock", "Jock", "Moke", "Dock"];
     const [, , bestFriend, ...rest] = friends;
-    console.log(bestFriend, rest);
+    // console.log(bestFriend, rest);  //Moke [ 'Dock' ]
 }
