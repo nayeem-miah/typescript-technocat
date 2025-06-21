@@ -35,6 +35,10 @@
     const man: GenericTuple<string, string> = ["MR.R", "MS.Z"];
 
     // user with id 
-    type User1 = { name: string, email: string };
+    // type User1 = { name: string, email: string }; 
+    interface User1{
+        name: string;
+        email: string;
+    }
     const userWithId : GenericTuple<string, User1>= ["232", { name: "paso", email: "paso@gmail.com" }];
 }
