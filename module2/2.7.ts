@@ -1,5 +1,5 @@
 {
-    // generic constraint with key operator
+    // generic constraint with key keyof operator
 
     type Vehicle = {
         bike: string;
@@ -15,7 +15,7 @@
 
     const getPropertyValue = <X, Y extends keyof X>(obj: X, key: Y) => {
         return obj[key]
-    }
+    };
 
     const user = {
         name: "MR Rah",
