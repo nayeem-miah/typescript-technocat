@@ -21,7 +21,7 @@
     };
 
 
-    // Access property and method
+    // crate instance ------------------- Access property and method
     const cat = new Animal("USA winds", "cat", "mew mew ........");
     const dog = new Animal("bd dog", "dog", "gaw gaw gaw............");
     cat.name;

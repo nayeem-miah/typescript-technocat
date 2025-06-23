@@ -1,0 +1,21 @@
+{
+  "name": "typescript-technocat",
+  "version": "1.0.0",
+  "description": "Welcome to this quick guide covering the most essential TypeScript concepts every developer should know.",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node-dev --respawn --transpile-only module3/3.3.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nayeem-miah/typescript-technocat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nayeem-miah/typescript-technocat/issues"
+  },
+  "homepage": "https://github.com/nayeem-miah/typescript-technocat#readme"
+}
