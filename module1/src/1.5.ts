@@ -1,4 +1,5 @@
-//  reference types --> object
+{
+    //  reference types --> object
 
 const user: {
     company: "programming Hero"; //type ---> literal type
@@ -27,3 +28,4 @@ const person: {
 
 person.age = 43;
 console.log(person);
+}
