@@ -37,4 +37,10 @@
     };
     greetFriends("Babul", "kabul")
 
+    const addNumbers = (...num: number[]): number[]=>{
+        return num
+    }
+    const numbers = addNumbers(23, 45, 56, 43);
+    const num2 = addNumbers(21);
+    console.log(numbers, num2)
 };

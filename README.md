@@ -3,7 +3,8 @@
 
 Welcome to this quick guide covering the most essential TypeScript concepts every developer should know.
 
-### --------- Part 1-----------------------
+# TypeScript Basic type part -1
+# 
 ---
 
 ## 📘 Data Types
@@ -163,7 +164,210 @@ Used for functions that never return:
 function throwError(message: string): never {
   throw new Error(message);
 }
+
+
 ```
+# TypeScript Advanced Concepts part-2
+
+---
+
+## 🧱 Type Assertion
+
+Tell TypeScript to treat a value as a specific type:
+```ts
+const value: any = "Hello World";
+const strLength: number = (value as string).length;
+```
+
+---
+
+## 🔍 Type Narrowing
+
+Use conditional logic to narrow down union types:
+```ts
+function printInfo(info: string | number) {
+  if (typeof info === "string") {
+    console.log(info.toUpperCase());
+  } else {
+    console.log(info.toFixed(2));
+  }
+}
+```
+
+---
+
+## 🧱 Object
+
+Create structured data using objects:
+```ts
+const user: { name: string; age: number } = {
+  name: "Nayeem",
+  age: 21,
+};
+```
+
+---
+
+## 📘 Interface
+
+Defines the structure of an object:
+```ts
+interface User {
+  name: string;
+  age: number;
+}
+
+const user: User = {
+  name: "Nayeem",
+  age: 21,
+};
+```
+
+---
+
+## 🔄 Type vs Interface
+
+- Use `interface` for object structure and extension  
+- Use `type` for primitives, tuples, or unions
+
+```ts
+type Point = {
+  x: number;
+  y: number;
+};
+
+interface Coordinate {
+  x: number;
+  y: number;
+}
+```
+
+---
+
+## 🌟 Introduction to Generics
+
+Create reusable components that work with any type:
+```ts
+function identity<T>(value: T): T {
+  return value;
+}
+```
+
+---
+
+## 🧩 Generic with Interface
+
+```ts
+interface ApiResponse<T> {
+  status: number;
+  data: T;
+}
+
+const response: ApiResponse<{ message: string }> = {
+  status: 200,
+  data: { message: "Success" },
+};
+```
+
+---
+
+## 🔁 Function with Generic
+
+```ts
+function getFirstElement<T>(arr: T[]): T {
+  return arr[0];
+}
+```
+
+---
+
+## 📎 Constraint with TypeScript
+
+```ts
+function logLength<T extends { length: number }>(item: T): void {
+  console.log(item.length);
+}
+```
+
+---
+
+## 🔑 Constraint Using keyof
+
+```ts
+function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
+```
+
+---
+
+## ⏳ Asynchronous TypeScript
+
+```ts
+async function fetchData(): Promise<string> {
+  return "Data fetched!";
+}
+
+fetchData().then(data => console.log(data));
+```
+
+---
+
+## ❓ Conditional Types
+
+```ts
+type IsString<T> = T extends string ? true : false;
+
+const result: IsString<"test"> = true; // true
+```
+
+---
+
+## 🗺️ Mapped Types
+
+```ts
+type Options<T> = {
+  [K in keyof T]: boolean;
+};
+
+type Features = {
+  darkMode: () => void;
+  notifications: () => void;
+};
+
+type FeatureToggles = Options<Features>;
+```
+
+---
+
+## 🛠️ Utility Types
+
+Common utility types in TypeScript:
+
+```ts
+type Task = {
+  title: string;
+  done: boolean;
+};
+
+const todo: Readonly<Task> = {
+  title: "Learn TS",
+  done: false,
+};
+
+const update: Partial<Task> = {
+  done: true,
+};
+```
+
+- `Partial<T>`: Makes all properties optional  
+- `Readonly<T>`: Makes all properties read-only  
+- `Pick<T, K>`: Selects specific keys from a type  
+- `Record<K, T>`: Constructs an object type with keys of K and values of T
+
+---
+
+✅ Practice these TypeScript patterns to strengthen your development skills!
 
 ---
 
