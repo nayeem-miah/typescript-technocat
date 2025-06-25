@@ -39,21 +39,25 @@
 
 
     //  smart valbe korer jonno function use kotta pari  --> professional waye
-    const isDog = (animal: Animal)=>{
+    const isDog = (animal: Animal): animal is Dog=> {
         return animal instanceof Dog;
-    }
+    };
+    const isCat = (animal: Animal): animal is Cat => {
+        return animal instanceof Cat;
+    };
+
    
     const getAnimal = (animal: Animal) => {
         // animal.makeBark() //roperty 'makeBark' does not exist on type 'Animal'
 
-        if (animal instanceof Dog) {
+        if (isDog(animal)) {
             animal.makeBark();
-        } else if(animal instanceof Cat) {
+        } else if (isCat(animal)) {
             animal.makeMew();
         } else {
             animal.makeSound();
         }
-    }
+    };
 
     //  create instance 
     const dog = new Animal("mong", "dog");

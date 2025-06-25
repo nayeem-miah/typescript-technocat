@@ -4,7 +4,7 @@
   "description": "Welcome to this quick guide covering the most essential TypeScript concepts every developer should know.",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only module3/3.4.ts",
+    "dev": "ts-node-dev --respawn --transpile-only module3/3.5.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
