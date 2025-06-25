@@ -38,11 +38,11 @@
     };
 
 
-    //  smart valbe korer jonno function use kotta pari
+    //  smart valbe korer jonno function use kotta pari  --> professional waye
     const isDog = (animal: Animal)=>{
         return animal instanceof Dog;
     }
-    isDog(dog)
+   
     const getAnimal = (animal: Animal) => {
         // animal.makeBark() //roperty 'makeBark' does not exist on type 'Animal'
 
