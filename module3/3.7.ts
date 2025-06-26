@@ -28,6 +28,5 @@
     console.log(Counter.increment());  // 1  --> using static then Counter.count 4
     // console.log(instance2.increment()); // 2 --> using static then Counter.count 5
 
-    console.log(" ");
 
 }
