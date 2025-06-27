@@ -26,5 +26,11 @@
         friends.forEach((friend) => console.log(`Hi ${friend}`));
     };
     greetFriends("Babul", "kabul");
+    const addNumbers = (...num) => {
+        return num;
+    };
+    const numbers = addNumbers(23, 45, 56, 43);
+    const num2 = addNumbers(21);
+    console.log(numbers, num2);
 }
 ;
