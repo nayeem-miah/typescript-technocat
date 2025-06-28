@@ -53,7 +53,7 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
     for (let array of arrays) {
         newArray.push(...array);
     };
-    return(newArray);
+    return (newArray);
 };
 
 const result = concatenateArrays([1, 2], [3, 4], [5]);
@@ -65,7 +65,7 @@ const result = concatenateArrays([1, 2], [3, 4], [5]);
 // Create a Vehicle class with private make and year properties and a getInfo() method.
 // Create a Car class extending Vehicle, adding a private model property and a getModel() method
 
-class Vehicle{
+class Vehicle {
     // private make: string;
     // year: number;
 
@@ -78,7 +78,7 @@ class Vehicle{
     }
 }
 
-class Car extends Vehicle{
+class Car extends Vehicle {
     private model: string;
 
     constructor(make: string, year: number, model: string) {
@@ -111,7 +111,40 @@ function processValue(value: string | number): number {
     }
 };
 
-const result2 = processValue("hello  form  js"); 
-const result3 = processValue(4); 
-console.log("result is", result3); 
+const result2 = processValue("hello  form  js");
+const result3 = processValue(4);
+// console.log("result is", result3); 
 // problem 5 done ------------------------------
+
+
+
+//  Problem 6: ---------------------------------
+// Description: Define an interface Product and create a function to find the product with the highest price in an array. If the array is empty, return null.
+
+interface Product {
+    name: string;
+    price: number;
+};
+const products = [
+    { name: "Pen", price: 10 },
+    { name: "Notebook", price: 25 },
+    { name: "Bag", price: 50 }
+];
+
+function getMostExpensiveProduct(products: Product[]): Product | null {
+    if (products.length === 0) {
+        return null
+    }
+    if (products) {
+
+        const heightPriceProduct = products.reduce((first, second) => first.price > second.price ? first : second);
+        return heightPriceProduct;
+    } else {
+        return null
+    }
+};
+
+const heightPriceProduct = getMostExpensiveProduct([]);
+console.log(heightPriceProduct);
+
+// problem 6 done -------------------------------------
