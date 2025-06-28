@@ -46,8 +46,14 @@ const filterRating = filterByRating(books);
 // problem 3 -----------------------------
 // Description: Create a generic function that concatenates multiple arrays of the same type using rest parameters.
 function concatenateArrays<T>(...arrays: T[][]): T[] {
-    const concatArray = arrays.reduce((acc, curr) => acc.concat(curr), []);
-    return concatArray;
+    // const concatArray = arrays.reduce((acc, curr) => acc.concat(curr), []);
+    // return concatArray;
+
+    let newArray: T[] = [];
+    for (let array of arrays) {
+        newArray.push(...array);
+    };
+    return(newArray);
 };
 
 const result = concatenateArrays([1, 2], [3, 4], [5]);
