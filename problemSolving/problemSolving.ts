@@ -160,7 +160,7 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
                 return products[index];
             }
         }
-    } 
+    }
     return maxProductPrice;
 }
 const heightPriceProduct1 = getMostExpensiveProduct(products); // max price product
@@ -168,3 +168,56 @@ const heightPriceProduct = getMostExpensiveProduct([]); // return null
 // console.log(heightPriceProduct);
 
 // problem 6 done -------------------------------------
+
+
+
+// problem 7 -------------------------------------
+// Description:
+// Define an enum Day for the days of the week.
+// Create a function that returns "Weekday" or "Weekend" based on the input day.
+
+enum Day {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+}
+
+function getDayType(day: Day): string {
+    if (day === Day.Sunday || day === Day.Saturday) {
+        return "Weekday or off day ❤️❤️"
+    } else {
+        return "Weekend 😑😑"
+    }
+};
+console.log(getDayType(Day.Thursday));
+
+// Define an enum Month for the months of the year
+enum Month {
+    January,
+    February,
+    March,
+    April,
+    May,
+    June,
+    July,
+    August,
+    September,
+    October,
+    November,
+    December
+}
+
+function examMonth(month: Month): string {
+    if (month === Month.December || month === Month.July) {
+        return "this month exam month"
+    }
+    return "not exam month"
+};
+// console.log(examMonth(Month.December));
+
+// problem 7 done -------------------
+
