@@ -131,20 +131,40 @@ const products = [
     { name: "Bag", price: 50 }
 ];
 
+// function getMostExpensiveProduct(products: Product[]): Product | null {
+//     if (products.length === 0) {
+//         return null
+//     }
+//     if (products) {
+
+//         const heightPriceProduct = products.reduce((first, second) => first.price > second.price ? first : second);
+//         return heightPriceProduct;
+//     } else {
+//         return null
+//     }
+// };
+
+
+// different ways
+
+
+
 function getMostExpensiveProduct(products: Product[]): Product | null {
     if (products.length === 0) {
         return null
     }
+    let maxProductPrice = products[0]
     if (products) {
-
-        const heightPriceProduct = products.reduce((first, second) => first.price > second.price ? first : second);
-        return heightPriceProduct;
-    } else {
-        return null
-    }
-};
-
-const heightPriceProduct = getMostExpensiveProduct([]);
-console.log(heightPriceProduct);
+        for (let index = 0; index < products.length; index++) {
+            if (products[index].price > maxProductPrice.price) {
+                return products[index];
+            }
+        }
+    } 
+    return maxProductPrice;
+}
+const heightPriceProduct1 = getMostExpensiveProduct(products); // max price product
+const heightPriceProduct = getMostExpensiveProduct([]); // return null
+// console.log(heightPriceProduct);
 
 // problem 6 done -------------------------------------
