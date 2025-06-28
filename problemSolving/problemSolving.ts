@@ -57,5 +57,40 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
 };
 
 const result = concatenateArrays([1, 2], [3, 4], [5]);
-console.log(result); // [1, 2, 3, 4, 5]
+// console.log(result); // [1, 2, 3, 4, 5]
 // problem 3 -----------------------------
+
+
+// ----------problem 4 -------------
+// Create a Vehicle class with private make and year properties and a getInfo() method.
+// Create a Car class extending Vehicle, adding a private model property and a getModel() method
+
+class Vehicle{
+    // private make: string;
+    // year: number;
+
+    constructor(private make: string, public year: number) {
+        this.make = make;
+        this.year = year;
+    }
+    getInfo() {
+        console.log(`make : ${this.make} year: ${this.year}`);
+    }
+}
+
+class Car extends Vehicle{
+    private model: string;
+
+    constructor(make: string, year: number, model: string) {
+        super(make, year);
+        this.model = model;
+    }
+    getModel() {
+        console.log(`model : ${this.model}`);
+    }
+};
+
+
+const myCar = new Car("Toyota", 2020, "Corolla");
+myCar.getInfo();   // Output: "Make: Toyota, Year: 2020"
+myCar.getModel();  // Output: "Model: Corolla"
