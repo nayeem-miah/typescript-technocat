@@ -232,15 +232,22 @@ function examMonth(month: Month): string {
 // Rejects if the number is negative
 
 async function squareAsync(n: number): Promise<number> {
-    return new Promise((resolve, reject) => {
-        if (n < 0) {
-            return reject(new Error("negative number is not allow"));
-        }
+    if (n > 0) {
+        return new Promise((resolved) => {
+            console.log("LOADING .................");
+            setTimeout(() => {
+                resolved(n * n)
+            }, 1000)
+        })
+    } else {
+        return new Promise((rejected) => {
+            console.log("LOADING .................");
+            setTimeout(() => {
+                throw new Error("Number must be non-negative");
+            }, 2000)
+        })
+    }
 
-        setTimeout(() => {
-            resolve(n * n);
-        }, 1000);
-    });
 }
 
 squareAsync(5)
