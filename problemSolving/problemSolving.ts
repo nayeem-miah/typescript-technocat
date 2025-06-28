@@ -243,6 +243,10 @@ async function squareAsync(n: number): Promise<number> {
     });
 }
 
+squareAsync(5)
+    .then(result => console.log("Square:", result))  // Output after 1 sec: Square: 25
+    .catch(err => console.error("Error:", err.message));
 
-squareAsync(4).then(console.log);
-squareAsync(-3).catch(console.error); 
+squareAsync(-3)
+    .then(result => console.log("Square:", result))
+    .catch(err => console.error("Error:", err.message)); // Output immediately: Error: Number must be non-negative
