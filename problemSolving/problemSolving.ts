@@ -94,3 +94,24 @@ class Car extends Vehicle{
 const myCar = new Car("Toyota", 2020, "Corolla");
 myCar.getInfo();   // Output: "Make: Toyota, Year: 2020"
 myCar.getModel();  // Output: "Model: Corolla"
+
+//  problem 4 done ---------------------------------
+
+// problem 5 ------------------------------
+// Description: Write a function that takes a string | number and returns:
+
+// The length if it's a string
+// The number multiplied by 2 if it's a number
+
+function processValue(value: string | number): number {
+    if (typeof value === "string") {
+        return value.length
+    } else {
+        return value * 2;
+    }
+};
+
+const result2 = processValue("hello  form  js"); 
+const result3 = processValue(4); 
+console.log("result is", result3); 
+// problem 5 done ------------------------------
