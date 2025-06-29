@@ -373,7 +373,7 @@ const update: Partial<Task> = {
 - `Pick<T, K>`: Selects specific keys from a type  
 - `Record<K, T>`: Constructs an object type with keys of K and values of T
 
-# 🚀 Object-Oriented Programming (OOP) in TypeScript
+# 🚀 Object-Oriented Programming (OOP) in TypeScript part-3
 
 This guide explains the **six core OOP concepts** in TypeScript with clear explanations and practical code examples — all in one place.
 
