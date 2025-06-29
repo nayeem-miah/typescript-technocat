@@ -367,8 +367,6 @@ const update: Partial<Task> = {
 
 # 🚀 Object-Oriented Programming (OOP) in TypeScript
 
-````md
-
 This guide explains the **six core OOP concepts** in TypeScript with clear explanations and practical code examples — all in one place.
 
 ---
@@ -379,6 +377,8 @@ This guide explains the **six core OOP concepts** in TypeScript with clear expla
 A `class` is a blueprint for creating objects. An `object` is an instance of a class that contains actual data.
 
 **✅ Example:**
+
+
 
 ```ts
 class Person {
