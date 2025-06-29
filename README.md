@@ -4,6 +4,8 @@
 Welcome to this quick guide covering the most essential TypeScript concepts every developer should know.
 
 ## Explore the code live on GitHub:
+### Problem Solving - TypeScript Technocat
+
 This folder contains various TypeScript practice problems and their solutions. These problems help strengthen fundamental and advanced TypeScript concepts through hands-on coding.
 
 [View problemSolving folder on GitHub](https://github.com/nayeem-miah/typescript-technocat/tree/main/problemSolving)
@@ -572,6 +574,7 @@ console.log(user.password);     // ****
 ---
 
 ## Explore the code live on GitHub:
+### Problem Solving - TypeScript Technocat
 This folder contains various TypeScript practice problems and their solutions. These problems help strengthen fundamental and advanced TypeScript concepts through hands-on coding.
 
 [View problemSolving folder on GitHub](https://github.com/nayeem-miah/typescript-technocat/tree/main/problemSolving)
