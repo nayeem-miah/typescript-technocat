@@ -157,6 +157,3 @@ This collection shows how TypeScript makes JavaScript safer and scalable through
 > “Code is like humor. When you have to explain it, it’s bad.” – Cory House
 > Keep coding, keep learning. You're doing great!
 
----
-
-```
