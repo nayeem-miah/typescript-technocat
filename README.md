@@ -365,19 +365,220 @@ const update: Partial<Task> = {
 - `Pick<T, K>`: Selects specific keys from a type  
 - `Record<K, T>`: Constructs an object type with keys of K and values of T
 
+
+````md
+# 🚀 Object-Oriented Programming (OOP) in TypeScript
+
+This guide explains the **six core OOP concepts** in TypeScript with clear explanations and practical code examples — all in one place.
+
 ---
 
-✅ Practice these TypeScript patterns to strengthen your development skills!
+## 1️⃣ Class & Object
+
+**🔹 Concept:**  
+A `class` is a blueprint for creating objects. An `object` is an instance of a class that contains actual data.
+
+**✅ Example:**
+
+```ts
+class Person {
+  name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+
+  greet(): void {
+    console.log(`Hello, I'm ${this.name}`);
+  }
+}
+
+const person = new Person("Nayeem");
+person.greet(); // Output: Hello, I'm Nayeem
+````
 
 ---
 
-## 🧠 Summary
+## 2️⃣ Inheritance
 
-This guide covered:
-- TypeScript primitives & advanced types
-- Object & function structures
-- Useful operators (spread, rest, ternary)
-- Optional features like optional chaining & nullish coalescing
-- Special types: nullable, unknown, and never
+**🔹 Concept:**
+`Inheritance` allows a class (child) to inherit properties and methods from another class (parent) using the `extends` keyword.
+
+**✅ Example:**
+
+```ts
+class Animal {
+  makeSound(): void {
+    console.log("Some generic animal sound");
+  }
+}
+
+class Dog extends Animal {
+  makeSound(): void {
+    console.log("Bark!");
+  }
+}
+
+const dog = new Dog();
+dog.makeSound(); // Output: Bark!
+```
+
+---
+
+## 3️⃣ Access Modifiers
+
+**🔹 Concept:**
+Access modifiers control the visibility of properties and methods.
+
+* `public`: Accessible from anywhere (default)
+* `private`: Accessible only within the class
+* `protected`: Accessible within the class and its subclasses
+
+**✅ Example:**
+
+```ts
+class BankAccount {
+  public owner: string;
+  private balance: number;
+  protected accountType: string;
+
+  constructor(owner: string, balance: number, type: string) {
+    this.owner = owner;
+    this.balance = balance;
+    this.accountType = type;
+  }
+
+  getBalance(): number {
+    return this.balance;
+  }
+}
+
+const account = new BankAccount("Nayeem", 10000, "Savings");
+console.log(account.owner);         // ✅ Nayeem
+console.log(account.getBalance()); // ✅ 10000
+// console.log(account.balance);   ❌ Error: private
+// console.log(account.accountType); ❌ Error: protected
+```
+
+---
+
+## 4️⃣ Abstraction
+
+**🔹 Concept:**
+`Abstraction` hides complex implementation details and exposes only essential features using `abstract` classes and methods.
+
+**✅ Example:**
+
+```ts
+abstract class Vehicle {
+  abstract move(): void;
+
+  start(): void {
+    console.log("Vehicle starting...");
+  }
+}
+
+class Car extends Vehicle {
+  move(): void {
+    console.log("Car is moving");
+  }
+}
+
+const car = new Car();
+car.start(); // Output: Vehicle starting...
+car.move();  // Output: Car is moving
+```
+
+---
+
+## 5️⃣ Polymorphism
+
+**🔹 Concept:**
+`Polymorphism` allows different classes to implement the same method in different ways.
+
+**✅ Example:**
+
+```ts
+class Shape {
+  draw(): void {
+    console.log("Drawing a shape");
+  }
+}
+
+class Circle extends Shape {
+  draw(): void {
+    console.log("Drawing a circle");
+  }
+}
+
+class Rectangle extends Shape {
+  draw(): void {
+    console.log("Drawing a rectangle");
+  }
+}
+
+const shapes: Shape[] = [new Circle(), new Rectangle()];
+shapes.forEach(shape => shape.draw());
+
+// Output:
+// Drawing a circle
+// Drawing a rectangle
+```
+
+---
+
+## 6️⃣ Encapsulation
+
+**🔹 Concept:**
+`Encapsulation` binds data and methods together and restricts direct access to some of the object's components.
+
+**✅ Example:**
+
+```ts
+class User {
+  private _password: string;
+
+  constructor(password: string) {
+    this._password = password;
+  }
+
+  get password(): string {
+    return "****"; // Hide actual password
+  }
+
+  set password(newPass: string) {
+    if (newPass.length >= 6) {
+      this._password = newPass;
+      console.log("Password updated.");
+    } else {
+      console.log("Password too short.");
+    }
+  }
+}
+
+const user = new User("123456");
+console.log(user.password);     // ****
+user.password = "abc";          // Password too short.
+user.password = "nayeem123";    // Password updated.
+console.log(user.password);     // ****
+```
+
+---
+
+## 🌟 Motivation for TypeScript Learners
+
+> "Every line of TypeScript you write is a step toward writing safer, smarter, and scalable JavaScript."
+
+> "TypeScript doesn’t slow you down — it protects you while you go faster."
+
+> "You don’t need to know everything today. Learn one concept, practice it, and you’ll master the rest."
+
+> "Bug-free code isn't magic — it's TypeScript."
+
+> "Start with confusion. Stay with practice. End with confidence."
+
+---
+
+🚀 Keep going. Your future self will thank you for learning TypeScript today.
 
 Happy Coding! 🚀
